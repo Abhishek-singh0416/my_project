@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!-- Add your stylesheet -->
+    <title>{% block title %}My Django Site{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'C:\Users\HP\Desktop\exilence\exelence website\my_project\static\css\styles.css' %}">   
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+
+        <div class="left-items">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+        
+        
+            <a href="{% url 'index' %}">Home</a>
+            
+          </div>
+
+        
+        <div>{% block button %}{% endblock %}</div>
+        
+        
+          
+    
+
+        
+        
+    </div>
+    
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

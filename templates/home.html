@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Discover Your learning path{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'C:\Users\HP\Desktop\exilence\exelence website\my_project\static\css\styles.css' %}"> 
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+
+        <div class="left-items">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+        
+        
+            <a href="#">Home</a>
+            <a href="#">course</a>
+            <a href="#">teacher</a>
+            <a href="#">about</a>
+            <a href="#">help</a>
+
+            
+        </div>
+
+        
+        <div id="btn-primary">
+            {% block button %}
+            <a href="{% url 'login' %}" class="btn btn-primary">login</a>
+            
+            {% endblock %}
+        </div>
+        
+          
+    
+
+        
+        
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-love">
+            
+        </div>
+        <div class="hero-text">
+            <h2>welcome, {{ user.first_name }} {{ user.last_name }}</h2>
+            <h1>Discover Your Learning Path</h1>
+            <p>Explore our diverse online courses and enhance your skills from anywhere. Start your learning journey today!</p>
+            <button class="btn">Start Learning</button>
+        </div>
+        <div class="hero-images">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+            <!-- <img src="{% static 'annie-spratt-W0pMGlPogow-unsplash.jpg' %}" alt="Person with a dog and laptop"> -->
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    {% block content %}
+        <div class="courses-section">
+            <h2>Courses</h2>
+            <div class="courses">
+                <div class="course-card">
+                    <h3>Digital Marketing Fundamentals</h3>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="course-card">
+                    <h3>Programming Basics</h3>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="course-card">
+                    <h3>Graphic Design Essentials</h3>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+</body>
+</html>
